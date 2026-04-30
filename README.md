@@ -26,7 +26,7 @@ Embed Question (BAAI/bge-small-en)
 Vector Search → ChromaDB → Top-K Chunks
      │
      ▼
-Prompt + Context → Gemini 2.0 Flash
+Prompt + Context → Gemini 2.5 Flash
      │
      ▼
 Answer + Sources → FastAPI → Streamlit UI
@@ -44,7 +44,7 @@ MLFlow Experiment Tracker
 | Embedding model | `BAAI/bge-small-en` via HuggingFace |
 | Vector store | ChromaDB |
 | Orchestration | LangChain |
-| LLM | Gemini 2.0 Flash (Google AI) |
+| LLM | Gemini 2.5 Flash (Google AI) |
 | Backend | FastAPI |
 | Frontend | Streamlit |
 | Experiment tracking | MLFlow |
