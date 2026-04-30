@@ -1,0 +1,10 @@
+.venv/
+.idea/
+chroma_db/
+mlflow/mlruns.db
+mlflow/mlruns/
+__pycache__/
+*.pyc
+.env
+*.sqlite3
+mlruns/

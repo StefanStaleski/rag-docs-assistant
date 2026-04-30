@@ -1,0 +1,27 @@
+version: "3.8"
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - MLFLOW_TRACKING_URI=sqlite:////app/mlflow/mlruns.db
+    volumes:
+      - ./chroma_db:/app/chroma_db
+      - ./mlflow:/app/mlflow
+
+  ui:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://api:8000
+    command: ["streamlit", "run", "ui/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+    depends_on:
+      - api

@@ -1,0 +1,15 @@
+pydantic
+requests
+beautifulsoup4
+streamlit
+mlflow
+
+langchain-text-splitters
+langchain-huggingface
+langchain-community
+langchain-chroma
+
+chromadb
+sentence-transformers
+
+google-genai
